@@ -4,11 +4,10 @@ const fibonacci = function(fibMax, prevFib=1, currentFib=2, fibTracker=3) {
   
   if (fibMax >= 3) {
     if (fibTracker < fibMax) {
-      fibTracker++;
       let fibHolder = currentFib
       currentFib += prevFib
       prevFib = fibHolder
-      return currentFib = fibonacci(fibMax, prevFib, currentFib, fibTracker);
+      return currentFib = fibonacci(fibMax, prevFib, currentFib, fibTracker + 1);
     }
     else
       return currentFib
